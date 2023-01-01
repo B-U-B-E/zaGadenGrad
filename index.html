@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="./images/nuclear-power.png"
+      rel="shortcut icon"
+      type="image/nuclear_icon"
+    />
+
+    <title>АМИН</title>
+  </head>
+  <style>
+    .pogreb {
+      text-align: center;
+      border: ridge 7px;
+      max-width: 50rem;
+      margin: 0 auto;
+    }
+
+    .clock {
+      color: #000;
+      font-size: 11px;
+      font-family: Orbitron;
+      letter-spacing: 1px;
+      color: aliceblue;
+    }
+    body {
+      background-color: #000;
+      color: aliceblue;
+    }
+  </style>
+  <body>
+    <div class="pogreb">
+      <div style="max-width: 45rem; margin: 0 auto">
+        <img
+          src="./images/bubeSePlazi.jpg"
+          alt="bubeSePlaziBubeNeDiseSmrdiNeSeDisePetarditeIcizmiteUgz"
+          style="
+            width: 150px;
+            background-color: black;
+            border-radius: 0px 0px 23px 23px;
+          "
+        />
+        <h1>СРЕЌНА ВЕСТ</h1>
+        <h5 style="line-height: 20px">
+          Поздрав до големата земја на чудата. Мојот вечен дом, мојата рајска
+          градина, земјата на мртвите, спомениците, садистите и некрофилите,
+          борците за ропство и неправда...Се надевам дека ќе биде подобро за
+          други генерации и нема да бидат уништувани, државно лошо образовани и
+          научно осакатени, живи запалени, исфрлени, отпишани од сопственото
+          огниште. Кога сме веќе кај огништето би сакал да бидам кремиран во
+          Софија или Белград зашто тука не било тоа "дозволено", но и за да се
+          зголеми просторот на скапиот метар квадрат за изградба на нови
+          зградурини од урбаната мафија во кои би можеле да погребаме повеќе
+          луѓе на повеќе спратови. Катни и подземни гаражи да се прават се со
+          цел да се олесни пристапот на пироманските служби кои би препорачал да
+          ја вршат функцијата, палење на секоја индивидуа за побрзо умртвување
+          за да се зачува природата и да се спречи зголемување на токсичните
+          елементи на веќе контаминираната земја, подземни води и воздух во
+          Смрдидонија или нашаНЕсеДишеДонија за да немора да купуваме скапи
+          крематорски печки, кои денес можат да бидат и практични, луѓето ќе
+          можат да се згреат трајно и ефикасно. Се надевам поповите ќе одобрат
+          зашто сепак е во прашање ЖИВОТОТ на ЖИВИОТ смрзнат човек во пеколното
+          НЕвреме. Доколку гробиштата се потребни за да гласаат мртвите би
+          замолил секој пред да биде запален да потпише договор во кој ќе изјави
+          дека дава согласност да го користат неговиот милозвучен глас за
+          политичките партии во однос променетата кожна гарнитура.
+        </h5>
+        <h1>Белдроб Ракџигеровски</h1>
+        <h5 style="max-width: 25rem; margin: 30px auto">
+          Денес над СмрдиДонИја се чади, ново ѓубре на слободата, Кримидонците
+          се борат за криминал и паричкиииии, смртидонците си горат сопствен
+          народ чизмички за мрсни сармичкииии за парче прасенце абе лудо
+          временце под чипкано миленце, скриено болно ѓубренце, НЕздраво
+          детенце...
+        </h5>
+      </div>
+
+      <div style="display: flex; justify-content: space-around">
+        <h5>Роден 17 мај 1984</h5>
+        <h5>
+          Умира на
+          <span class="den">den</span>
+          <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+          <!-- <span class="smrdlivCasovnik">smrdlivoCasovnik</span> -->
+        </h5>
+      </div>
+
+      <div>
+        <h5>потекло земја вечно Животарска, век вековита НЕчовечка</h5>
+      </div>
+    </div>
+    <script>
+      let smrdlivDen = document.querySelector(".den");
+      //   let smrdlivCasovnik = document.querySelector(".smrdlivCasovnik");
+      const meseci = [
+        "Јануари",
+        "Февруари",
+        "Март",
+        "Април",
+        "Мај",
+        "Јуни",
+        "Јули",
+        "Август",
+        "Септември",
+        "Октомври",
+        "Ноември",
+        "Декември",
+      ];
+      let novSmrdliv = new Date();
+      let novSmrdlivDen = novSmrdliv.getDate();
+      let novSmrdlivMesec = novSmrdliv.getMonth();
+      let novaSmrdlivGodina = novSmrdliv.getFullYear();
+
+      let smrdlivSat = novSmrdliv.getHours();
+      let smrdlivMinut = novSmrdliv.getMinutes();
+      let smrdlivSecund = novSmrdliv.getSeconds();
+      let ludoVreme =
+        novSmrdlivDen + " " + meseci[novSmrdlivMesec] + " " + novaSmrdlivGodina;
+      smrdlivDen.textContent = ludoVreme;
+
+      function showTime() {
+        var date = new Date();
+        var h = date.getHours();
+        var bube = date.getMinutes();
+        var s = date.getSeconds();
+        var session = "AM";
+
+        if (h == 0) {
+          h = 12;
+        }
+
+        if (h > 12) {
+          h = h - 12;
+          session = "PM";
+        }
+
+        h = h < 10 ? "0" + h : h;
+        if (bube < 10) {
+          bube = "0" + bube;
+        }
+        s = s < 10 ? "0" + s : s;
+
+        var time = h + ":" + bube + ":" + s + " " + session;
+        document.getElementById("MyClockDisplay").innerText = time;
+        document.getElementById("MyClockDisplay").textContent = time;
+
+        setTimeout(showTime, 1000);
+      }
+
+      showTime();
+    </script>
+  </body>
+</html>
